@@ -1,0 +1,99 @@
+{
+    "model": "LLAMA_2_7B_CHAT",
+    "prompt_type": "few_shot",
+    "data_dir": "../../../data",
+    "dataset_dir": "../../../data/datasets/base_experiments/car_vs_bike/test",
+    "prompt_dir": "base_experiments/car_vs_bike",
+    "positive_token": "true",
+    "negative_token": "false",
+    "cache_dir": ".cache/results/car_vs_bike",
+    "cavs_dir": "../car_vs_bike/methods/.cache/cavs",
+    "device": "cuda",
+    "verbose": false,
+    "class_names": [
+        "bike",
+        "car"
+    ],
+    "label_aspect_names": [
+        "bike",
+        "car"
+    ],
+    "confounding_aspect_names": [
+        "negative",
+        "positive"
+    ],
+    "runs": [
+        {
+            "method": "tcav",
+            "dataset": "test_50_50",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "label",
+                "layer": 24
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_50_50",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "confounding",
+                "layer": 22
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_50_50",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "label",
+                "layer": 8
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_50_50",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "confounding",
+                "layer": 9
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_95_5",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "label",
+                "layer": 24
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_95_5",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "confounding",
+                "layer": 22
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_95_5",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "label",
+                "layer": 8
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test_95_5",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "confounding",
+                "layer": 9
+            }
+        }
+    ]
+}

@@ -1,0 +1,232 @@
+{
+    "model": "LLAMA_2_7B_CHAT",
+    "prompt_type": "few_shot",
+    "data_dir": "../../../data",
+    "dataset_dir": "../../../data/datasets/base_experiments/cebab/test",
+    "prompt_dir": "base_experiments/cebab",
+    "positive_token": "true",
+    "negative_token": "false",
+    "cache_dir": ".cache/results/cebab",
+    "cavs_dir": "../cebab/methods/.cache/cavs",
+    "device": "cuda",
+    "verbose": false,
+    "class_names": [
+        "review_negative",
+        "review_positive"
+    ],
+    "label_aspect_names": [
+        "review_negative",
+        "review_positive"
+    ],
+    "original_aspect": "review",
+    "runs": [
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "noise",
+                "layer": 14,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "ambiance",
+                "layer": 26,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "service",
+                "layer": 14,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "food",
+                "layer": 14,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "noise",
+                "layer": 16,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "ambiance",
+                "layer": 22,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "service",
+                "layer": 22,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "MMProbe",
+                "aspect": "food",
+                "layer": 22,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "noise",
+                "layer": 7,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "ambiance",
+                "layer": 11,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "service",
+                "layer": 7,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "food",
+                "layer": 5,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "noise",
+                "layer": 16,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "ambiance",
+                "layer": 22,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "service",
+                "layer": 22,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "probing_with_intervention",
+            "dataset": "test",
+            "intervention": {
+                "model": "LRProbe",
+                "aspect": "food",
+                "layer": 22,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        }
+    ]
+}

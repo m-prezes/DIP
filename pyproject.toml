@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "dip"
+version = "0.1.0"
+description = ""
+authors = ["Mateusz Politycki <mateusz.politycki@gamil.com>"]
+readme = "README.md"
+packages = [{include = "dip"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.0.0"
+notebook = "^7.1.1"
+tqdm = "^4.66.1"
+pandas = "^2.2.1"
+plotly = "^5.19.0"
+torch = "^2.2.1"
+kaleido = "0.2.1"
+seaborn = "^0.13.2"
+scikit-learn = "^1.4.1.post1"
+transformers = "^4.39.2"
+accelerate = "^0.28.0"
+bitsandbytes = "^0.43.0"
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^24.2.0"}
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

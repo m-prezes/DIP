@@ -1,0 +1,128 @@
+{
+    "model": "LLAMA_2_7B_CHAT",
+    "prompt_type": "few_shot",
+    "data_dir": "../../../data",
+    "dataset_dir": "../../../data/datasets/base_experiments/cebab/test",
+    "prompt_dir": "base_experiments/cebab",
+    "positive_token": "true",
+    "negative_token": "false",
+    "cache_dir": ".cache/results/cebab",
+    "cavs_dir": "../cebab/methods/.cache/cavs",
+    "device": "cuda",
+    "verbose": false,
+    "class_names": [
+        "review_negative",
+        "review_positive"
+    ],
+    "label_aspect_names": [
+        "review_negative",
+        "review_positive"
+    ],
+    "original_aspect": "review",
+    "runs": [
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "noise",
+                "layer": 16,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "ambiance",
+                "layer": 22,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "service",
+                "layer": 22,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "food",
+                "layer": 22,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "noise",
+                "layer": 18,
+                "aspect_names": [
+                    "noise_negative",
+                    "noise_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "ambiance",
+                "layer": 29,
+                "aspect_names": [
+                    "ambiance_negative",
+                    "ambiance_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "service",
+                "layer": 16,
+                "aspect_names": [
+                    "service_negative",
+                    "service_positive"
+                ]
+            }
+        },
+        {
+            "method": "tcav",
+            "dataset": "test",
+            "intervention": {
+                "model": "SVMProbe",
+                "aspect": "food",
+                "layer": 14,
+                "aspect_names": [
+                    "food_negative",
+                    "food_positive"
+                ]
+            }
+        }
+    ]
+}
